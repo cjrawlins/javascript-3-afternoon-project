@@ -107,9 +107,19 @@ function ingredients(obj) {
 */
 
 //Code Here
+function largeNumbers(obj) {
+  let smallestNum = 0;
+  let {first, second, third} = obj;
+  if ( first < second && first < third ) {
+    smallestNum = first;
+  } else if ( second < first && second < third ) {
+    smallestNum = second;
+  } else if ( third < first && third < second ) {
+    smallestNum = third;
+  }
+  return smallestNum;
+}
 
-
-//<----------Stopped Here---------->//
 ////////// PROBLEM 6 //////////
 
 /*
@@ -119,5 +129,16 @@ function ingredients(obj) {
 */
 
 //Code Here
-
+function numberGroups(obj) {
+  let {a,b,c} = obj;
+  let arr = [a.length,b.length,c.length];
+  let longIndex = Math.max(a.length,b.length,c.length);
+  if (a.length === longIndex) {
+     return a;
+  } else if (b.length === longIndex) {
+     return b;
+  } else if (c.length === longIndex) {
+    return c;
+  }
+}
 
